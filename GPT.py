@@ -1,10 +1,9 @@
-%env OPENAI_API_KEY=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
-
 import os
 import openai
 import queue
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = "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"
+
 
 response = openai.Completion.create(
   model="text-davinci-003",
@@ -20,5 +19,5 @@ if os.path.isfile('tmp/summary.txt'):
     os.remove('tmp/summary.txt')
 f = open('tmp/summary.txt', 'a')
 
-f.writeLines(str(response['choices'][0]['text']));
+f.writelines(str(response['choices'][0]['text']) + '\n');
 f.close();
