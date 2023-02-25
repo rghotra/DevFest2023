@@ -1,0 +1,2 @@
+
+This code is creating a class called Test which has two variables, a and b. It then creates an instance of the Test class called p, which has the values 4 and 7 for a and b respectively. It then prints out the values of a and b, and then calls the swap() method which swaps the values of a and b. Finally, it prints out the new values of a and b.
