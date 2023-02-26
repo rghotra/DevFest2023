@@ -3,4 +3,5 @@
   
   publish = "server.py"
 
+[context.production]
   environment = { PATH = "$PATH:/opt/buildhome/google-cloud-sdk/bin", GOOGLE_APPLICATION_CREDENTIALS = "gcloud_account_key.json" }
