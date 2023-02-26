@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- <form method="POST" action="{{ url_for('process-file') }}" enctype="multipart/form-data"></form> -->
+
+  <!--
+    File: index.html
+    Shayl Chetty
+    MIT Licensed - see http://opensource.org/licenses/MIT for details.
+
+  -->
+
+  <!-- Custom Title Bar -->
+  <title>CodeSnap</title>
+
+	<!-- 11/13/2021: adding latest font awesome
+	--->
+  <script src="https://kit.fontawesome.com/a6c9a7a3a0.js" crossorigin="anonymous"></script>
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+	<!-- Third party plugin CSS-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+
+  <!-- Theme CSS -->
+  <link href="css/creative.css" rel="stylesheet">
+
+  <!-- Index CSS -->
+  <link href="css/index.css" rel="stylesheet">
+
+  <!-- Custom favicon -->
+  <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+
+  <!-- Google Analytics Tracking Tag. Track how people access my site and such.
+       (assuming they don't block ads or whatever from Google) -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68657454-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+	<!-- 
+	These are Open Graph Metadata tags, which are used by Facebook, LinkedIn and 
+	other social media sites to determine certain metadata like URLs, Images to
+	display, etc. More information can be found on the Open Graph website, or on 
+	this Facebook Developers page:
+
+	https://ogp.me/
+	https://developers.facebook.com/docs/sharing/webmasters/#markup
+	-->
+	<meta property="og:url"                content="" />
+	<meta name="image" property="og:image" content="https://github.com/shaylchetty/personal/blob/main/IMG_0374.jpg" />
+	<meta property="og:image:alt"          content="Riverside Soccer" />
+	<meta property="g:locale"              content="en_US" />
+	<meta property="og:type"               content="website" />
+	<meta property="og:author"             content="Shayl Chetty" />
+	<meta property="og:title"              content="Shayl Chetty's Personal Website" />
+	<meta property="og:description"        content="This is Shayl Chetty's Personal Website" />
+	
+	<meta name="description" content="This is Shayl Chetty's Personal Website">
+
+</head>
+
+<body id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+
+      <!-- Updated with latest Creative -->
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">CodeSnap</a>
+
+
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" 
+              data-toggle="collapse" data-target="#navbarResponsive" 
+              aria-controls="navbarResponsive" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Project Description</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#work">Project Description</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#photos">The Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#output">Output</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--  Intro Section
+
+        Originally used a header image found at the following URL:
+        https://upload.wikimedia.org/wikipedia/commons/f/f5/Free-ride.jpg
+				
+			 Now using an image I generated myself on Deep Dream Generator:
+			 (I blurred this image using Paint.net, effects -> blurs -> surface blur 
+			   radius 100 and threshold 50)
+			 https://deepdreamgenerator.com/ddream/1qe40osrt8f
+   -->
+  <header class="masthead text-center text-black d-flex">
+    <div class="container my-auto">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="text-uppercase">
+            <strong>CodeSnap</strong>
+          </h1>
+          <hr class="divider my-4" />
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p class="text-faded text-black mb-5">Columbia Dev Fest 2023</p>
+          <p class="text-italic font-weight-bold mb-5">
+            Hackathon Project</a>
+          </p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More!</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+ 
+
+  
+    <!-- Work Experience Section. -->
+  <section class="page-section">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-8 mx-auto text-center mb-4">
+        <div class="col-lg-12 ">
+          <h2 class="section-heading" id="work"> <b>Project Description</b></h2>
+        </div>
+          </div>
+          <div>
+            <br>
+            <h5> 
+              Our program will take in a picture of java code and show you its output as well as a summary of what the code does.
+            </h5>
+            
+            <h2>Inspiration</h2>
+            <p style="font-size: 24px;">Have you ever seen a snippet of code, and not known what it does? CodeSnap is here to help!</p>
+            
+            <h2>What it does</h2>
+            <p style="font-size: 24px;">Just take a picture, and upload it to our website! We will tell you what the output is, and give you a short summary of what the code does.</p>
+            
+            <h2>How it does it</h2>
+            <ol style="font-size: 24px;">
+              <li>First, the program processes your image using optical character recognition.</li>
+              <li>Then, we make syntactical adjustments to ensure that we can run your code.</li>
+              <li>Next, we run your code on our server and return the output.</li>
+              <li>Lastly, we display the output of the code, as well as a summary of the code provided by GPT3.</li>
+            </ol>
+            
+            <h2>Applications</h2>
+            <p style="font-size: 24px;">This can be used to grade coding assignments and tests with ease. It can be used to educate people about the code that they input.</p>
+            
+            <h2>Future direction</h2>
+            <ul style="font-size: 24px;">
+              <li>Compiling entire java classes with object oriented structures.</li>
+              <li>Our next endeavors would focus on other languages, such as C and C#, that don’t rely on white spaces.</li>
+              <li>Future endeavors might focus on other languages, such as Python and Bash, that rely on white space.</li>
+            </ul>
+            
+            <h2>Limitations</h2>
+            <ul style="font-size: 24px;">
+              <li>Code must be in the main method</li>
+              <li>If the code is handwritten, the handwriting must be neat</li>
+            </ul>
+            
+              
+            
+            
+            
+              <br>
+            </div>
+          </div>
+          
+          <hr class="divider my-4" />
+        </div>
+				<div class="col-lg-12 col-sm-12 text-center">
+          <!-- <i class="fas fa-4x fa-car-alt text-primary sr-icons"></i> -->
+          
+          <!-- <p class="text-muted">May 2023 to Aug 2023 </p> -->
+        </div>
+	      
+      </div>
+      <div class="text-center">
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#photos">
+        Try it Out!</a>
+      </div>
+    </div>
+  </section>
+	    
+     <div class="text-center">
+        
+     </div>
+   </div>
+  </section>
+
+  <!-- GitHub Section -->
+  <div class="page-section min-padding-top bg-dark" id="github">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+
+          <!-- Tweaking this part so the title links straight to my GitHub
+							page, without adding the silly extra "CLICK THIS ICON" text that was
+							there before. -->
+          <h2 class="section-heading" id="photos">
+            <a class="text-white" >
+						  <b>Our Product</b>
+              <i style="color:white"></i>
+          </h2>
+					<hr class="divider light my-4" />
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub links below -->
+    <div class="container-fluid p-0">  <!-- p-0 makes the images go edge to edge (no padding) -->
+      <div class="row no-gutters">
+
+<!--Start EHUFIEVFPEYPFE-->
+        <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<div class="file-upload">
+  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">New Image</button>
+
+  <div class="image-upload-wrap">
+    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+    <div class="drag-text">
+      <h3>Drag and drop a new image</h3>
+    </div>
+  </div>
+  <div class="file-upload-content">
+    <img class="file-upload-image" src="#" alt="your image" />
+    <div class="image-title-wrap">
+      <!-- <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button> -->
+    </div>
+  </div>
+</div>
+<!--End EHUFIEVFPEYPFE-->
+
+        
+        
+				
+      </div>
+			
+			<div class="text-center p-4">
+        <a class="btn btn-black btn-xl js-scroll-trigger" href="#output">
+        See Output
+				</a>
+      </div>
+			
+    </div>
+  </div>
+
+  
+
+
+
+
+
+  <section class="page-section bg-primary">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 mx-auto text-center mb-4">
+          <h2 class="section-heading text-white" id="output">Output</h2>
+          <hr class="divider light my-4" />
+        </div>
+      </div>
+
+
+
+      
+      
+
+      
+      <div class="col-lg-8 mx-auto mb-4 text-white">
+        <div id="response">
+
+
+
+
+
+            <!-- <div class="col-lg-8 mx-auto"> -->
+              
+              <!-- <p class="text-faded text-black mb-5">Columbia Dev Fest 2023</p> -->
+              
+              
+              
+              <!-- <p> 
+                In computer science, a Blob (Binary Large Object) is a data type used to store large amounts of binary data, such as images, audio, and video files, in a database or other storage system. Blobs are typically used to represent data that cannot be easily represented as text, such as multimedia files.
+
+                Blobs are treated as a single entity and are not parsed or processed by the database or storage system, unlike other data types such as text or numbers. Instead, the blob is stored as a single unit, which can be retrieved as needed.
+                
+                Blobs are often used in web applications to store files uploaded by users or to store images and other media used in the application. Blobs can be accessed and manipulated using programming languages and frameworks that support the storage system or database where they are stored.
+              
+              </p> -->
+             
+            <!-- </div> -->
+
+
+
+
+
+
+          </div>
+      </div>
+
+      <div class="row"> 
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="page-section min-padding-top bg-dark" id="github">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+
+          <!-- Tweaking this part so the title links straight to my GitHub
+							page, without adding the silly extra "CLICK THIS ICON" text that was
+							there before. -->
+          <h2 class="section-heading" id="photos">
+            <a class="text-white" >
+						  Photos
+              <i style="color:white"></i>
+          </h2>
+					<hr class="divider light my-4" />
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub links below -->
+    <div class="container-fluid p-0">  <!-- p-0 makes the images go edge to edge (no padding) -->
+      <div class="row no-gutters">
+
+        <!--
+              Currently these link to:
+							Deep Dreams <-> Car Scraping Data              <-> Loan Repayment
+              Chetty.io  <-> Scrabble (GUI I Final Project) <-> Racket Weather
+         -->
+
+				<!-- Some code I wrote to download Deep Dreams off of DeepDreamGenerator -->
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" >
+            
+						<!--  Same photo as the header, but resized. -->
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/stoga.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                
+                <div class="project-name">
+								  Rohan Mapping Project
+							  </div>
+              </div>
+            </div>
+          </a>
+        </div>
+				
+				<!-- Some code I Python modified from Reddit for scraping car data -->
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" >
+            
+						<!--  Same photo as the header, but resized. -->
+            <img class="img-responsive" width="100%" height="auto" src="img/Columbia.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                
+                <div class="project-name">
+								  Justin console logging
+								</div>
+              </div>
+            </div>
+          </a>
+        </div>
+				
+				<!-- Loan Repayment Site using Vue.js -->
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box">
+            
+						<!--  Same photo as the header, but resized. -->
+            <img class="img-responsive" width="100%" height="auto" src="img/Beach.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                
+                <div class="project-name">
+								  Karim Neural Networking
+								</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Source code for this website => Chetty.io -->
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" >
+            
+						<!--  Same photo as the header, but resized. -->
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/chetty.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                
+                <div class="project-name">Rohan Still Coding</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Source code for GUI I last assignment (Scrabble) -->
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" >
+            <!--  Thumbnail from Wikipedia
+                  URL: https://upload.wikimedia.org/wikipedia/commons/5/5d/Scrabble_game_in_progress.jpg
+            -->
+            <img class="img-responsive" width="100%" height="auto" src="img/gnabry.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                
+                <div class="project-name">
+                  4 AM - Why are we still here?
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Source code for OPL Project (Racket Weather) -->
+        <div class="col-lg-4 col-sm-6">
+          <a class="portfolio-box" >
+            <!-- Thumbnail from gannett-cdn.com
+                 URL: http://www.gannett-cdn.com/-mm-/3526533239800dac0c978150377d099025f1e52c/c=52-700-4303-3102&r=x1683&c=3200x1680/local/-/media/USATODAY/None/2014/10/03/1412368123000-Mesostorm-Lightning.jpg -->
+            <img class="img-responsive" width="100%" height="auto" src="img/NYC.jpg" alt="">
+            <div class="portfolio-box-caption">
+              <div class="portfolio-box-caption-content">
+                
+                <div class="project-name">
+                  Project Map
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+				
+      </div>
+			
+			<div class="text-center p-4">
+        <a class="btn btn-black btn-xl js-scroll-trigger" href="#contact">
+        Contact Us
+				</a>
+      </div>
+			
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Education Section -->
+  <section class="page-section bg-primary">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 mx-auto text-center mb-4">
+          <h2 class="section-heading text-white" id="about">The Team</h2>
+          <hr class="divider light my-4" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <h3 class="text-white">Justin</h3>
+          
+         
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 text-center div-padding-fix mb-4">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <h3 class="text-white">Karim</h3>
+          
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <h3 class="text-white">Shayl</h3>
+          
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <h3 class="text-white">Rohan</h3>
+					
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#work">Wait There's More!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Contact section -->
+  <section class="min-padding" id="contact">
+    <div class="container">
+    
+      <!-- Contact Shayl Row -->
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="section-heading">
+          
+          <!-- Attempting to avoid spam by removing @ and the dot in my domain -->
+            Contact the Team</h2>
+          <hr class="divider black my-4" />
+          <p>Thanks!</p>
+          
+          <!-- Really avoiding spam by sending emails to the spam box
+               Docs URL: https://formspree.io/ 
+               Also, Bootstrap forms: https://getbootstrap.com/docs/3.3/css/#forms -->
+	        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+							!!!!!!!     CHANGE THE FORMSPREE ENDPOINT TO YOUR OWN EMAIL IF YOU FORK THIS REPO. MUCH THANKS     !!!!!!!          
+							!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+					-->
+          <form action="https://formspree.io/mdopovkv" method="POST" class="form-horizontal" role="form">
+            <!-- Need a name, reply to email, and a message -->
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Your message" class="form-control" required></textarea>
+            </div>
+            <!-- Hidden elements here -->
+            <input type="hidden" name="_subject" value="New email from Contact Me Form!" class="form-control">
+            <input type="hidden" name="_next" value="thanks.html" />
+            <!-- Submit button -->
+            <div class="form-group">
+              <input type="submit" value="Email Us" class="btn btn-primary btn-xl">
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          
+        </div>
+      </div>
+      
+      <!-- Email, LinkedIn, and GitHub links -->
+      <div class="row">
+      
+			  
+        <div class="col-4 col-sm-4 col-lg-2 offset-lg-3 text-center">
+				  <!-- <a href="img/html.pdf">
+						<i class="fa fa-envelope fa-4x sr-icons"></i>
+					</a>
+					<a href="img/html.pdf">
+						<p>Email - <span class="text-blue text-italic font-weight-bold">see resume</span></p>
+					</a> -->
+        </div>
+        
+        <div class="col-4 col-sm-4 col-lg-2 text-center">
+          <a href="https://github.com/shaylChetty">
+            <i class="fa fa-github-square fa-4x sr-icons"></i>
+          </a>
+          <p><a href="https://github.com/shaylchetty/snapcode" class="text-blue">GitHub</a></p>
+        </div>
+        
+        <div class="col-4 col-sm-4 col-lg-2 text-center">
+          <!-- <a href="https://github.com/shaylChetty">
+            <i class="fa fa-github-square fa-4x sr-icons"></i>
+          </a>
+          <p><a href="https://github.com/" class="text-blue">GitHub</a></p> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  THIS IS THE FOOTER - displays a copyright notice and
+        that Bootstrap powers this web page.
+        
+        6/16/2018: Added new line for the Source on Github... part, with margin bottom
+                   set to 1 (awesome new bootstrap 4 mb-1 class)-->
+  <div class="container">
+    <p class="text-center text-muted text-small mb-1">
+      CodeSnap &copy; <span id="copyright-year"></span>. All rights reserved.
+      Powered by <a href="http://www.getbootstrap.com/" class="text-blue">Bootstrap</a>.
+    </p>
+    <!-- <p class="text-center text-muted text-small">
+      Source on <a href="https://github.com/ShaylD94/Shayld94.github.io" class="text-blue">GitHub</a>.
+      Theme based on the
+      <a href="http://startbootstrap.com/template-overviews/creative/" class="text-blue">Creative Bootstrap Theme</a>
+      by <a href="http://startbootstrap.com/" class="text-blue">Start Bootstrap</a>.
+    </p> -->
+		<br/>
+  </div>
+
+  <!-- 2/20/2021: Updated with the latest Start Bootstrap code, so following what they did.
+							  Exception: the slim jquery seems to cause console errors. The full jquery gets rid of that,
+								and it seems like the scrolling works too. Weird.
+       https://github.com/BlackrockDigital/startbootstrap-creative  -->
+       
+ <!-- Bootstrap core JS-->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Third party plugin JS-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<!-- Core theme JS-->
+  <script src="js/creative.js" defer></script>
+	
+	<!-- Automagically update the copyright year - why did I ever hardcode that? RIP lazy 2015 - 2020 me. -->
+	<script>
+		document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+	</script>
+  
+</body>
+</html>
