@@ -1,4 +1,6 @@
-FROM python:3.10-slim
+FROM openjdk:slim
+COPY --from=python:3.10-slim / /
+# FROM python:3.10-slim
 
 ENV PYTHONUNBUFFER True
 
