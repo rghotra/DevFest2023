@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN chmod +x rsjk.sh
 RUN chmod +x runCode.sh
 
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 server:app
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 1 --timeout 0 server:app

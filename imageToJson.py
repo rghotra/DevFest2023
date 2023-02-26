@@ -5,7 +5,6 @@ import json
 
 if not os.path.isdir('tmp'):
     os.mkdir('tmp')
-    
 
 client = vision.ImageAnnotatorClient()
 

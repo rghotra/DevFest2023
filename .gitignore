@@ -65,6 +65,5 @@ node_modules/
 # dotenv environment variables file
 .env
 
-
 gcloud_account_key.json
 gpt_key.txt
