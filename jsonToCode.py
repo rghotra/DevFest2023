@@ -3,8 +3,8 @@ import os
 import openai
 
 data = json.load(open('tmp/output.json'))
-code = data['responses'][0]['fullTextAnnotation']['text']
-
+# code = data['responses'][0]['fullTextAnnotation']['text']
+code = data['fullTextAnnotation']['text']
 
 """lines = code.split('\n')
 for i in range(len(lines)):
