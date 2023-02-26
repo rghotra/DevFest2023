@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nice-mechanism-378917",
+  "private_key_id": "590217ad7bfa799fd0b0e0e677c7b97627fec345",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDSwZA2ydGnwIHY\nFxeAbX2oPEmlTVHcTDMosje8ikcKrFKSMUfQZZ6B7OeTrjG/406FEQPodH8yLWVM\n+19Vuvps+yHYJDbBjkRbN4hlvnKvAG0Ks609fAGhS3TCb3ss5Cg53u1xlOu0tWca\nNFQI1brOg1M41qILDHgjSKFy11HqpiHN7JN2xenk7nvoZYXdQNOFTrenvyijc5sD\nucoMewrtSC8WUs3VlAyfE/jG6smgpYjKG1Zp+2kdLAif16MoXxVHoehR/jiO/XaK\nHxaLWazDBtzEqvD5QYRRnnPqVeCcbcClNSgNrmNVQvt0hQgKQfg3rcMxMd7nrnmw\nFotlNPxbAgMBAAECggEAW+qkgWiiwfVRC9QCYXYfPAzTF79xiNFI7KJRca6jDjIa\nrvzEM8zmBQcz9nId63Dw8VL679pDETjAOgNV0FeEWZxrZc9hfCgWguvk1m7pqI5Y\ngDbdwvd+5IA6s4QYZfs52gdyajuHUyBcj46r6dCBMQkQdjURphzxln3aP/JNnTa9\nqA4ENK40sXSVyg0aiTe+mOvASLb996FlaBx+tkIwQToNVexVoAG2kD0YoccWyx5n\nGIxWy0QptRgMI3eZtbGAugWNw0/OTDWbW+2h4fHd4CvpzWaVSgOl3gaByr0YJJ0y\njEOWg5Xg023ULA00wqAN7ZjCghNO0HSDKyNBVm8QxQKBgQDzkHyG1ltxSwAIiU+c\nnBy6+1JnaEFE/0lt6VEGe4lOcGBEXq6uHu+uivv+NHXGh4t2v6PBZQXEru88l9cS\nGzKZUSjTX02hYWB/70k+x4v1NX8t5K4+w9DWjYxKQV3hyu0T6nmwsDT8S+Jtc6gW\nPb668WAL55ikScs3/7OhI+NsPQKBgQDdhEFjUKryIGOL0AT5PAiEEKzc3IGWLfwM\nus7g/+KeFxgkinnt4p2XXEOSRkHmqeee8y5D71owREBgpZXyTaU7flPcRI+SQaUw\nc0P0wsxYAjxIZWCxrxV1JCPKcy5qk7VfnTJpNTF1v9xPhhDPGlCxVPxyrW8kqppi\nmlhVSLMcdwKBgQCDjBH1sWiJ8/v8oEzDRP2vb3W+K+y0mzzJhC4i1i3+k2srAghO\nOp8xIhef4C2MIEEOzcpf9XP8Go9Tpp6eRNo7PD5UizCebL1124MvyQ6qTU53Nv91\nHsV4W9LdeBiAjt0k2IsJBuJXMZUFkGXEPWz6AsvhIiCq+sAraotWCNAX8QKBgQDQ\naYqLwm3TeJ2wAXtscwsgFgBNnDlf7svhvjC+iIHSc7AHUTH+muPicLAyg1+lgd2m\nMu4ohJ26I7zeMWyumFcJboXAC9F4rcKZnxkkw9I2S4QkKR2cjzoFCIeUBmJ5a5eN\n6fxv99gdDPJe76gI8p1Q+sC5tGuJd+nhM45ATzIVaQKBgCMZ/ZZPme+8fg/er1Cp\nUocQIjQqFoUAwdPANmI6H7xBhpuTaQ7ZTtquqAVYy+aQGFcccv5R13rIYd7S96DT\nomkuaF+qkyBjx3enAj/kQ7rxMVRypOA16tIeQShxTzPJN5VmgYi9u4wrb6ZojrAZ\ndWz2ZzSmQjGttdr3iuci/kvc\n-----END PRIVATE KEY-----\n",
+  "client_email": "devfest2023-rsjk@nice-mechanism-378917.iam.gserviceaccount.com",
+  "client_id": "115103087175381818193",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/devfest2023-rsjk%40nice-mechanism-378917.iam.gserviceaccount.com"
+}
