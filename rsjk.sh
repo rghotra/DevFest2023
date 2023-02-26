@@ -3,8 +3,9 @@
 file_name=$1
 
 # rm -rf tmp
+export GOOGLE_APPLICATION_CREDENTIALS="gcloud_account_key.json"
 
-./imageToJson.sh $file_name
+python3 imageToJson.py $file_name
 python3 jsonToCode.py
 ./runCode.sh
 
