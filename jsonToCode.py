@@ -13,7 +13,9 @@ for i in range(len(lines)):
     elif lines[i] and lines[i][-1] != ';':
         lines[i] += ';'"""
 
-openai.api_key = "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"
+with open('gpt_key.txt', 'r') as file:
+    openai.api_key = file.readlines()[0]
+
 response = openai.Completion.create(
   model="text-davinci-003",
   prompt=f"can you make this code compile, but don't fix runtime errors%n{code}%ndon't say anything before or after the fixed code",

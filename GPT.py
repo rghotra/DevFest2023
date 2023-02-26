@@ -2,8 +2,8 @@ import os
 import openai
 import queue
 
-openai.api_key = "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"
-
+with open('gpt_key.txt', 'r') as file:
+    openai.api_key = file.readlines()[0]
 
 response = openai.Completion.create(
   model="text-davinci-003",
