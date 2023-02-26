@@ -2,7 +2,7 @@
 
 file_name=$1
 
-rm -rf tmp
+# rm -rf tmp
 
 ./imageToJson.sh $file_name
 python3 jsonToCode.py
