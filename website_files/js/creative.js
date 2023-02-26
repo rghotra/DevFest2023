@@ -1,3 +1,12 @@
+
+const loadingCircle = document.getElementById('loading-circle');
+loadingCircle.style.display = 'none';
+  
+  
+  // change the color of the loading circle
+// loadingCircle.style.borderTopColor = '#ff0000'; // set to red
+
+
 // Define the Flask route to handle the image processing
 
 // const URL = "http://localhost:5000/process";
@@ -75,49 +84,67 @@ function readURL(input) {
       $('.image-title').html(input.files[0].name);
 
 
-      // console.log(input.files[0].name)
-
-      // if(input.files[0].name.endsWith(".heic"))
-      // {
-      //   // window.URL.createObjectURL = function() {};
-      //   console.log("gefevfvelfwevfewfeufvewuyfvew")
-      //   const reader = new FileReader();
-      //   reader.onload = function(event) {
-      //     const blob = new Blob([event.target.result], { type: "image/jpeg" });
-      //     const url = window.URL.createObjectURL(blob);
-      //     const img = new Image();
-      //     img.src = url;
-      //     document.body.appendChild(img);
-      //   };
-      //   reader.readAsArrayBuffer(input.files[0]);
-
-      // }
-
+     
       console.log(JSON.stringify({
         data: reader.result
       }))
-      fetch("https://devfest2023-je62xqayyq-ue.a.run.app/process-file", {
-        
-        method: 'POST',
-        mode: "cors",
-        body: JSON.stringify({
-          data: reader.result,
-          // datatype: 'jsonp'
-        })
-      }).then(data => data.json()).then(json => {
+      fetchData()
+
+
+
+
     
-          console.log(json)
+
+      
+
+function fetchData(){
+        loadingCircle.style.display = 'block';
+        fetch("https://devfest2023-je62xqayyq-ue.a.run.app/process-file", {
           
-    
-            const responseElement = document.getElementById('response');
-            responseElement.innerText = (json.output);
-          })
-          .catch(error => {
-            const responseElement = document.getElementById('response');
-            responseElement.innerText = 'Error: ' + error.message;
-          });
+          
+          method: 'POST',
+          mode: "cors",
+          body: JSON.stringify({
+            data: reader.result,
+            // datatype: 'jsonp'
+          })
+        }).then(data => data.json()).then(json => {
+      
+            console.log(json)
+            
+
+            // const loadingCircle = document.getElementById('loading-circle');
+
+
+            loadingCircle.style.display = 'none';
+
+
+
+
+      
+              const responseElement = document.getElementById('response');
+              responseElement.innerText = (json.output);
+            })
+            .catch(error => {
+              loadingCircle.style.display = 'none';
+
+              const responseElement = document.getElementById('response');
+              responseElement.innerText = 'Error: ' + error.message;
+            });
+    }
     
     };
+
+
+
+
+
+
+
+
+
+
+
       reader.readAsDataURL(input.files[0]);
 
       //console.log(reader.result);

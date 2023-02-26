@@ -10,7 +10,6 @@
     File: index.html
     Shayl Chetty
     MIT Licensed - see http://opensource.org/licenses/MIT for details.
-
   -->
 
   <!-- Custom Title Bar -->
@@ -50,7 +49,6 @@
 	other social media sites to determine certain metadata like URLs, Images to
 	display, etc. More information can be found on the Open Graph website, or on 
 	this Facebook Developers page:
-
 	https://ogp.me/
 	https://developers.facebook.com/docs/sharing/webmasters/#markup
 	-->
@@ -90,22 +88,22 @@
             <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Project Description</a>
+            <a class="nav-link js-scroll-trigger" href="#project">Project Description</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
+            <a class="nav-link js-scroll-trigger" href="#product">Try CodeSnap Yourself!</a>
           </li>
 
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#work">Project Description</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#photos">The Product</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#output">Output</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#photos">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#team">The Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
@@ -117,7 +115,6 @@
   </nav>
 
   <!--  Intro Section
-
         Originally used a header image found at the following URL:
         https://upload.wikimedia.org/wikipedia/commons/f/f5/Free-ride.jpg
 				
@@ -138,9 +135,9 @@
         <div class="col-lg-8 mx-auto">
           <p class="text-faded text-black mb-5">Columbia Dev Fest 2023</p>
           <p class="text-italic font-weight-bold mb-5">
-            Hackathon Project</a>
+            <a href="https://www.youtube.com/watch?v=BLzyWKnTf1s">Demo Video</a>
           </p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More!</a>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#project">Find Out More!</a>
         </div>
       </div>
     </div>
@@ -174,44 +171,36 @@
       <div class="row no-gutters">
         <div class="col-lg-8 mx-auto text-center mb-4">
         <div class="col-lg-12 ">
-          <h2 class="section-heading" id="work"> <b>Project Description</b></h2>
+          <h2 class="section-heading" id="project"> <b>Project Description</b></h2>
         </div>
           </div>
           <div>
             <br>
             <h5> 
-              Our program will take in a picture of java code and show you its output as well as a summary of what the code does.
+              Our program will take in a picture of Java code and show you its output as well as a summary of what the code does.
             </h5>
             
             <h2>Inspiration</h2>
-            <p style="font-size: 24px;">Have you ever seen a snippet of code, and not known what it does? CodeSnap is here to help!</p>
+            <p style="font-size: 24px;">Have you ever seen a snippet of code, and not known what it does? Or wrote some code on paper and wanted to run it without retyping it? CodeSnap is here!</p>
             
             <h2>What it does</h2>
-            <p style="font-size: 24px;">Just take a picture, and upload it to our website! We will tell you what the output is, and give you a short summary of what the code does.</p>
+            <p style="font-size: 24px;">Just take a picture, and upload it to our website! Our automated algorithm will parse the image, display the code's output, and give you a short summary of how the code works. Currently, CodeSnap accepts Java code that is to be placed in the main method - all code taken in the picture must compile correctly if inserted directly into the main method with no external libraries.</p>
             
-            <h2>How it does it</h2>
-            <ol style="font-size: 24px;">
-              <li>First, the program processes your image using optical character recognition.</li>
-              <li>Then, we make syntactical adjustments to ensure that we can run your code.</li>
-              <li>Next, we run your code on our server and return the output.</li>
-              <li>Lastly, we display the output of the code, as well as a summary of the code provided by GPT3.</li>
-            </ol>
+            <h2>How we built it</h2>
+            <p style="font-size: 24px;">We used a variety of software to develop this application. The website was built with Flask for the backend and vanilla JS for the frontend. We designed the website in Figma then coded it using bootstrap. As for the actual CodeSnap algorithm, it was largely programmed in a mix of Python and Bash scripting. We used Python, interfaced with the Google Cloud Vision API to read text from the input image using NLP artificial intelligence models. To overcome the drawbacks of these OCR models, we employed syntactical correction algorithms that fix pedantic syntax errors in the code (e.g. missing semicolons, mismatched curly braces); however, we intentionally left runtime errors unresolved for some of the applications listed below. The output json file is then automatically processed into a Java file, again using Python. An API call is then made to ChatGPT, prompting a summary of the Java code. The final component used Bash to compile and execute the java file. A bash script was also created to simplify this pipeline into a single executable file. A Flask API server was then made in Python, which accepts requests to the /process-file subpage and passes it to the executable shell script. This API is currently hosted on Google Cloud and can be interacted with via a JSON request to https://devfest2023-je62xqayyq-ue.a.run.app/process-file.</p>
+
+            <h2>Challenges we ran into</h2>
+            <p style="font-size: 24px;">We ran into several obstacles throughout the hacking period. We explored many different models for OCR, but found that in general they are rather poor for transcribing code; this makes sense given that these models were trained on human languages, thus syntax like a lone curly brace appears unusual to the model -> it is more likely to read it as comma or period, for example. Thus, we had to develop syntax correction algorithms to ensure the code compiled in spite of some minor issues. Another major challenge was connecting the front-end and back-end. Once we had both ends of production working by themselves, we found that integrating the two was its own even more daunting problem. We ran into countless issues, including CORS errors, finding a suitable deployment service, hosting, and sending/receiving large base64-encoded data. Nevertheless, we persevered and eventually came up with unique solutions that made this project possible.
+              </p>
             
-            <h2>Applications</h2>
-            <p style="font-size: 24px;">This can be used to grade coding assignments and tests with ease. It can be used to educate people about the code that they input.</p>
+            <h2>Accomplishments that we're proud of</h2>
+            <p style="font-size: 24px;">We are proud of our resiliency, persisting through all the challenges we faced. Given the short time allotted, we take pride in our ability to work together as a team and develop a software with real world applications.</p>
             
-            <h2>Future direction</h2>
-            <ul style="font-size: 24px;">
-              <li>Compiling entire java classes with object oriented structures.</li>
-              <li>Our next endeavors would focus on other languages, such as C and C#, that don’t rely on white spaces.</li>
-              <li>Future endeavors might focus on other languages, such as Python and Bash, that rely on white space.</li>
-            </ul>
+            <h2>What we learned</h2>
+            <p style="font-size: 24px;">Over the course of this project, we acquired numerous soft and hard skills, including teamwork, full stack development, optical character recognition, and unix programming.</p>
             
-            <h2>Limitations</h2>
-            <ul style="font-size: 24px;">
-              <li>Code must be in the main method</li>
-              <li>If the code is handwritten, the handwriting must be neat</li>
-            </ul>
+            <h2>What's next for CodeSnap</h2>
+            <p style="font-size: 24px;">In this first round of development, we demonstrated the promising potential of CodeSnap, as it can read handwritten (or typed) Java main-method code and produce it's output. In the future, we plan to expand this to interpreting entire class structures in Java, as well as parsing other languages including C, C++, Python, R, and Bash. We are most excited about developing OCR for Python and Bash, which are indent sensitive, posing a far more difficult challenge.</p>
             
               
             
@@ -231,7 +220,7 @@
 	      
       </div>
       <div class="text-center">
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#photos">
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#product">
         Try it Out!</a>
       </div>
     </div>
@@ -252,9 +241,10 @@
           <!-- Tweaking this part so the title links straight to my GitHub
 							page, without adding the silly extra "CLICK THIS ICON" text that was
 							there before. -->
-          <h2 class="section-heading" id="photos">
+          <h2 class="section-heading" id="product">
             <a class="text-white" >
-						  <b>Our Product</b>
+						  <b>Try &nbsp; CodeSnap &nbsp; Yourself!</b>
+           
               <i style="color:white"></i>
           </h2>
 					<hr class="divider light my-4" />
@@ -312,6 +302,17 @@
         <div class="col-lg-8 mx-auto text-center mb-4">
           <h2 class="section-heading text-white" id="output">Output</h2>
           <hr class="divider light my-4" />
+          
+          <div class="loading-wrapper">
+            <div id="loading-circle"></div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+
+        
+
         </div>
       </div>
 
@@ -322,7 +323,8 @@
 
       
       <div class="col-lg-8 mx-auto mb-4 text-white">
-        <div id="response">
+        <div style="background-color: #f4623a; color: #efeeee; font-size: 30px; padding: 10px; font-family: Arial, sans-serif;" id = "response">
+
 
 
 
@@ -336,7 +338,6 @@
               
               <!-- <p> 
                 In computer science, a Blob (Binary Large Object) is a data type used to store large amounts of binary data, such as images, audio, and video files, in a database or other storage system. Blobs are typically used to represent data that cannot be easily represented as text, such as multimedia files.
-
                 Blobs are treated as a single entity and are not parsed or processed by the database or storage system, unlike other data types such as text or numbers. Instead, the blob is stored as a single unit, which can be retrieved as needed.
                 
                 Blobs are often used in web applications to store files uploaded by users or to store images and other media used in the application. Blobs can be accessed and manipulated using programming languages and frameworks that support the storage system or database where they are stored.
@@ -352,13 +353,14 @@
 
           </div>
       </div>
+    
 
       <div class="row"> 
       </div>
 
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#contact">Contact Us</a>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#photos">Team Photos</a>
         </div>
       </div>
     </div>
@@ -384,6 +386,9 @@
       </div>
     </div>
 
+
+
+    
     <!-- GitHub links below -->
     <div class="container-fluid p-0">  <!-- p-0 makes the images go edge to edge (no padding) -->
       <div class="row no-gutters">
@@ -450,11 +455,11 @@
           <a class="portfolio-box" >
             
 						<!--  Same photo as the header, but resized. -->
-            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/chetty.jpg" alt="">
+            <img class="img-responsive" width="100%" height="auto" src="img/portfolio/thumbnails/slp.jpg" alt="">
             <div class="portfolio-box-caption">
               <div class="portfolio-box-caption-content">
                 
-                <div class="project-name">Rohan Still Coding</div>
+                <div class="project-name">Sleeping Beauty</div>
               </div>
             </div>
           </a>
@@ -499,7 +504,7 @@
 			
 			<div class="text-center p-4">
         <a class="btn btn-black btn-xl js-scroll-trigger" href="#contact">
-        Contact Us
+        The Team
 				</a>
       </div>
 			
@@ -509,6 +514,8 @@
 
 
 
+  
+
 
 
 
@@ -517,40 +524,40 @@
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-lg-8 mx-auto text-center mb-4">
-          <h2 class="section-heading text-white" id="about">The Team</h2>
+          <h2 class="section-heading text-white" id="team">The Team</h2>
           <hr class="divider light my-4" />
         </div>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
           <i class="fa fa-user" aria-hidden="true"></i>
-          <h3 class="text-white">Justin</h3>
+          <h3 class="text-white">Justin | CC'26</h3>
           
          
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center div-padding-fix mb-4">
           <i class="fa fa-user" aria-hidden="true"></i>
-          <h3 class="text-white">Karim</h3>
+          <h3 class="text-white">Karim | SEAS '26</h3>
           
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
           <i class="fa fa-user" aria-hidden="true"></i>
-          <h3 class="text-white">Shayl</h3>
+          <h3 class="text-white">Shayl | SEAS '26</h3>
           
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6 text-center mb-4">
           <i class="fa fa-user" aria-hidden="true"></i>
-          <h3 class="text-white">Rohan</h3>
+          <h3 class="text-white">Rohan | CC '26</h3>
 					
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#work">Wait There's More!</a>
+          <a class="btn btn-light btn-xl js-scroll-trigger" href="#contact"> Contact Us </a>
         </div>
       </div>
     </div>
@@ -561,6 +568,32 @@
 
 
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   <!-- Contact section -->
   <section class="min-padding" id="contact">
     <div class="container">
