@@ -2,6 +2,7 @@ import os
 import subprocess
 import base64
 import urllib.request as urq
+import shutil
 
 from flask import Flask, request, jsonify
 
@@ -11,12 +12,20 @@ app = Flask(__name__)
 
 @app.route('/process-file', methods=['POST'])
 def process_file():
+    print("received")
+    print(request.json)
     data = request.json.get('data')
+    
+    print(data != '');
 
     if not data:
         return jsonify({'error': 'No data provided.'}), 400
-
+    
     temp_file = 'tmp/file.jpg'
+    if os.path.isdir('tmp'):
+        shutil.rmtree('tmp')
+    os.mkdir('tmp')
+        
     response = urq.urlopen(data)
     with open(temp_file, 'wb') as f:
         f.write(response.file.read())
@@ -35,4 +44,4 @@ def process_file():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=True)
