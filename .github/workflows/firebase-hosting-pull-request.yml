@@ -9,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: python server.py
+      - run: >-
+          pip install -r requirements.txt && gcloud auth
+          activate-service-account
+          devfest2023-rsjk@nice-mechanism-378917.iam.gserviceaccount.com
+          --key-file=gcloud_account_key.json && chmod +x rsjk.sh && chmod +x
+          imageToJson.sh && chmod +x runCode.sh && python server.py
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
